@@ -16,6 +16,12 @@ header h1 {
     margin: 0;
 }
 
+header p {
+    color: #9D9C98;
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+
 section {
     padding: 20px;
     margin: 20px 0;
@@ -26,6 +32,8 @@ section h2 {
 }
 
 #about {
+    display: flex;
+    align-items: center;
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
@@ -46,6 +54,16 @@ section h2 {
     text-decoration: underline;
 }
 
+.about-image {
+    width: 200px; /* oder eine andere passende Größe */
+    height: auto;
+    border-radius: 7.5%; /* für ein rundes Bild */
+    margin-right: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
 
 #contact-form {
     max-width: 300px;
@@ -56,13 +74,6 @@ section h2 {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
 }
 
 .service-list {
@@ -154,21 +165,52 @@ footer {
 
 .appearance {
     background-color: #fff;
-    margin: 10px 0;
+    margin: 20px 0; /* Increased margin for better separation */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    border: 1px solid #ddd; /* Optional: adds a subtle border */
+}
+
+.appearance h4 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced bottom margin */
+    font-size: 1.1em; /* Adjust the font size as needed */
+}
+
+
+
+.appearances-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-appearances, .past-appearances {
+    width: 48%; /* Adjust width as needed */
+    max-height: 350px; /* Adjust as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    background-color: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.appearance h3 {
+.future-appearances {
+    margin-right: 2%; /* Space between the blocks */
+}
+
+.future-appearances h3, .past-appearances h3 {
     margin-top: 0;
     color: #007bff; /* Or any color that fits your website theme */
 }
 
-.appearance p {
+.future-appearances p, .past-appearances p {
     margin-bottom: 0;
     color: #555;
 }
+
+
+
 
 
 /*testimonial*/
