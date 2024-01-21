@@ -175,6 +175,43 @@ section h2 {
     height: 100%;
 }
 
+#latest .row {
+    display: flex; /* Enables Flexbox */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out items */
+}
+
+#latest .latest-item-description {
+    flex: 1; /* Assigns 50% of the space to the description */
+    padding: 10px; /* Optional: Adds some padding around the text */
+}
+
+#latest .latest-item-description p {
+    text-align: justify;
+    margin: 0;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Add padding for better readability */
+}
+
+#latest .latest-image {
+    width: 55%; /* Set image width to 50% of its parent */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: to match the paragraph style */
+}
+
+/* Ensure that the overall layout is responsive */
+@media screen and (max-width: 768px) {
+    #latest .row {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+    #latest .latest-image {
+        width: 100%; /* Image takes full width on smaller screens */
+    }
+}
+
+
 #public-appearances {
     background-color: #f2f2f2;
     padding: 20px;
